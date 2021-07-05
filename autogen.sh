@@ -6,7 +6,7 @@
 # EXIT and signals that correspond to SIGHUP, SIGINT, SIGQUIT and SIGTERM.
 signals="0 1 2 3 15"
 
-files="INSTALL doc/texinfo.tex"
+files="INSTALL"
 
 cleanup()
 {

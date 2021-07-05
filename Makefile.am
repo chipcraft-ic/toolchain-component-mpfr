@@ -24,23 +24,14 @@ AUTOMAKE_OPTIONS = gnu
 # old Automake version.
 ACLOCAL_AMFLAGS = -I m4
 
-SUBDIRS = doc src tests tune tools/bench
+SUBDIRS = src tune
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = mpfr.pc
 
-nobase_dist_doc_DATA = AUTHORS BUGS COPYING COPYING.LESSER NEWS TODO \
-  examples/ReadMe examples/can_round.c examples/divworst.c \
-  examples/rndo-add.c examples/sample.c examples/threads.c \
-  examples/version.c
+nobase_dist_doc_DATA = AUTHORS BUGS COPYING COPYING.LESSER NEWS TODO
 
-EXTRA_DIST = PATCHES VERSION doc/README.dev doc/check-typography doc/mini-gmp \
-  tools/check_mparam.c tools/ck-clz_tab tools/ck-copyright-notice \
-  tools/ck-mparam tools/ck-news tools/ck-version-info tools/get_patches.sh \
-  $(DATAFILES)
-
-bench:
-	cd tools/bench && $(MAKE) $(AM_MAKEFLAGS) bench
+EXTRA_DIST = PATCHES VERSION $(DATAFILES)
 
 # Various checks for "make dist" / "make distcheck".
 # Warning! With "make distcheck", neither the top-level directory nor

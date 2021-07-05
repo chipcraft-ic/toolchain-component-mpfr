@@ -849,7 +849,7 @@ if $EGREP -q -e '-dev$' $srcdir/VERSION; then
 fi
 
 dnl Output
-AC_CONFIG_FILES([Makefile mpfr.pc doc/Makefile src/Makefile tests/Makefile tune/Makefile src/mparam.h:src/mparam_h.in tools/bench/Makefile])
+AC_CONFIG_FILES([Makefile mpfr.pc src/Makefile tune/Makefile src/mparam.h:src/mparam_h.in])
 AC_OUTPUT
 
 dnl NEWS README AUTHORS Changelog
